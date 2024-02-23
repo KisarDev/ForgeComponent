@@ -6,10 +6,10 @@ export default function TopCategoryComponent({ categories }) {
             <div className="m-2 text-2xl font-bold text-center md:text-4xl" id="title">TOP CATEGORIAS MAIS BUSCADAS</div>
 
             <div className="flex flex-row md:flex-wrap max-w-[1200px] w-full overflow-auto">
-                {categories.map(category => {
+                {categories.map((category, index) => {
 
                     return (
-                        <div className="p-2 min-w-[90%] max-w-[90%] md:min-w-[50%] md:max-w-[50%]">
+                        <div key={index} className="p-2 min-w-[90%] max-w-[90%] md:min-w-[50%] md:max-w-[50%]">
                             <Card img={category.img} title={category.title} />
                         </div>
                     )
