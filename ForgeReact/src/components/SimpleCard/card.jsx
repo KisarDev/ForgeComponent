@@ -1,5 +1,4 @@
 export default function CardVeiculo({ dados, title}) {
-    console.log(dados);
     return (
         <div>
             <div className="p-5 text-center text-4xl font-bold">{title}</div>

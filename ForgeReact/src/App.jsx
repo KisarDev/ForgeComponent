@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Component, useEffect, useState } from 'react'
 import TopCategoryComponent from './components/TopCategory/TopCategory'
 import topCategoryDate, { title } from './components/TopCategory/dados'
 import SearchByCategoryDate from './components/SearchByCategory/dados'
@@ -10,28 +10,17 @@ import BoxUlLinks from './components/footer/BoxUlLinks'
 import footerDate from './components/footer/dados'
 import Newslatter from './components/newslatter/Newslatter'
 import newslatterDate from './components/newslatter/dados'
-
+import PerksBox from './components/PerksBox/PerksBox'
+import perksBoxData from './components/PerksBox/dados'
+import BoxSocialMidia from './components/BoxSocialMidia/BoxSocialMidia'
+import boxSocialMidiaData from './components/BoxSocialMidia/dados'
+import BoxDestaque from './components/BoxDestaque/BoxDestaque'
+import BoxDestaqueData from './components/BoxDestaque/dados'
+import MainCategoryRounded from './components/MainCategoryRounded/MainCategoryRounded'
+import MainCategoryRoundedData from './components/MainCategoryRounded/dados'
 function App() {
-  function Test() {
-    return (
-      <div className="debug flex justify-center items-center">
-        <div className="p-1">Filho 1</div>
-        <div className="p-1">
-          <div className="p-1">Filho 2</div>
-          <div className="p-1">
-            <div className="flex p-1">
-              <div className="p-1">Filho 3</div>
-              <div className="p-1">Filho 4</div>
-            </div>
-            <div className="p-1">Filho 4</div>
-          </div>
-        </div>
-      </div>
-    )
-  }
   return (
     <div>
-      <Test />
       <CardVeiculo dados={SimpleCardDate} title={title} />
 
       <div className="flex justify-center">
@@ -53,7 +42,28 @@ function App() {
       <div className="footer flex justify-center items-center">
         <Newslatter title={newslatterDate.title} subtitle={newslatterDate.subtitle} placeholder={newslatterDate.placeholder} button={newslatterDate.button} />
       </div>
+
+
+
+      <div className='flex justify-center items-center bg-[#F6F6F6] border'>
+        <PerksBox dados={perksBoxData} />
+
+      </div>
+      <div className='flex justify-center items-center bg-[#F6F6F6] border'>
+        <BoxSocialMidia dados={boxSocialMidiaData} title='siga-nos em:' />
+      </div>
+
+      <div className='flex justify-center items-center bg-[#F6F6F6] border'>
+        <BoxDestaque dados={BoxDestaqueData} />
+      </div>
+
+      <div className='flex justify-center items-center bg-[#F6F6F6] border'>
+        <MainCategoryRounded dados={MainCategoryRoundedData} title='PRINCIPAIS CATEGORIAS' />
+      </div>
+
+
     </div>
+
 
 
   );
