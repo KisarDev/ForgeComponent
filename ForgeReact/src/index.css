@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+{/**Debug Css**/}
+.debug {
+    @apply relative bg-cyan-500 ring-1 ring-black;
+  }
+  .debug::before {
+    content: '1';
+    @apply absolute top-0 left-1 font-bold text-[8px];
+    text-shadow: 1px 1px 1px #000; 
+  }
+  .debug > * {
+    @apply relative bg-yellow-500 ring-1 ring-black;
+  }
+  .debug > *::before {
+    content: '2';
+    @apply absolute top-0 left-1 font-bold text-[8px];
+    text-shadow: 1px 1px 1px #000; 
+  }
+  .debug * > * {
+    @apply relative bg-green-500 ring-1 ring-black;
+  }
+  .debug * > *::before {
+    content: '3';
+    @apply absolute top-0 left-1 font-bold text-[8px];
+    text-shadow: 1px 1px 1px #000; 
+  }
+  .debug * * > * {
+    @apply relative bg-orange-500 ring-1 ring-black;
+  }
+  .debug * * > *::before {
+    content: '4';
+    @apply absolute top-0 left-1 font-bold text-[8px];
+    text-shadow: 1px 1px 1px #000; 
+  }
+  .debug * * * > * {
+    @apply relative bg-purple-500 ring-1  ring-black;
+  }
+  .debug * * * > *::before {
+    content: '5';
+    @apply absolute top-0 left-1 font-bold text-[8px];
+    text-shadow: 1px 1px 1px #000; 
+  }
+  {/**Debug Css**/}
