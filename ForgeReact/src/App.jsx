@@ -18,6 +18,8 @@ import BoxDestaqueData from './components/BoxDestaque/dados'
 import MainCategoryRounded from './components/MainCategoryRounded/MainCategoryRounded'
 import MainCategoryRoundedData from './components/MainCategoryRounded/dados'
 import SkeletonComponent from './components/Skeleton/skeleton';
+import ProductComponent from './components/Product/product'
+import productData from './components/Product/dados'
 function App() {
   return (
 
@@ -68,11 +70,19 @@ function App() {
 
       </div>
 
+      <div className='hidden'>
+        <SkeletonComponent />
+      </div>
 
-      <SkeletonComponent />
+      
+
+        <ProductComponent props={productData}/>
+      
 
 
     </>
+
+
 
 
 
