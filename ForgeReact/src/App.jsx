@@ -4,9 +4,9 @@ import SearchByCategoryDate from './components/SearchByCategory/dados'
 import SimpleCardDate from './components/SimpleCard/dados'
 import CardVeiculo from './components/SimpleCard/card'
 import SearchByCategory from './components/SearchByCategory/SearchByCategory'
-import BoxUlLinks from './components/footer/BoxUlLinks'
+import BoxUlLinks from './components/footer/boxUlLinks/boxUlLinks'
 
-import footerDate from './components/footer/dados'
+import footerDate from './components/footer/boxUlLinks/dados'
 import Newslatter from './components/newslatter/Newslatter'
 import newslatterDate from './components/newslatter/dados'
 import PerksBox from './components/PerksBox/PerksBox'
@@ -20,7 +20,17 @@ import MainCategoryRoundedData from './components/MainCategoryRounded/dados'
 import SkeletonComponent from './components/Skeleton/skeleton';
 import ProductComponent from './components/Product/product'
 import productData from './components/Product/dados'
+import SimpleTable from './components/simpleTable/simpleTable'
+import simpleTableData from './components/simpleTable/dados'
+import ChangeMainImage from './components/changeMainImage/changeMainImage'
+import BasicFooter from './components/basicFooter/basicFooter'
 function App() {
+  const images = [
+    'https://via.placeholder.com/224/000',
+    'https://via.placeholder.com/224/2522',
+    'https://via.placeholder.com/224/9734',
+    'https://via.placeholder.com/224/8888',
+  ];
   return (
 
     <>
@@ -74,13 +84,26 @@ function App() {
         <SkeletonComponent />
       </div>
 
-      
 
-        <ProductComponent props={productData}/>
-      
+      <div className='hidden'>
+
+        <ProductComponent props={productData} />
+      </div>
+
+      <div className='hidden'>
+        <SimpleTable dados={simpleTableData} />
+      </div>
+
+      <div className='hidden'>
+        <ChangeMainImage images={images} />
+      </div>
 
 
+      <div>
+        <BasicFooter />
+      </div>
     </>
+
 
 
 

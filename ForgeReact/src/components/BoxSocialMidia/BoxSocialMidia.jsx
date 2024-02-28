@@ -1,8 +1,8 @@
 import { Icon } from '../../utils/Icon';
 
-export default function BoxSocialMidia({ dados, title }) {
+export default function BoxSocialMidia({ dados, title, direction = 'row' }) {
     return (
-        <div className="flex flex-col text-[#8A2A92] gap-2">
+        <div className={`flex ${direction == "col" ? "flex-col" : "flex-row"} gap-2 text-white`} >
             <h1 className='font-bold'>{title}</h1>
 
             <div className="flex gap-x-6 gap-y-1 items-center">
@@ -11,6 +11,6 @@ export default function BoxSocialMidia({ dados, title }) {
                 ))}
             </div>
 
-        </div>
+        </div >
     );
 }
