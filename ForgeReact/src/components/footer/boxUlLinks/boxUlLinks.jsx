@@ -3,7 +3,7 @@ import { Icon } from "../../../utils/Icon";
 export default function BoxUlLinks({ dados, title, have_icon = false }) {
     return (
 
-        <div className=" flex flex-col bg-white  font gap-2">
+        <div className=" flex flex-col bg-black font gap-2">
             <h1 className="text-xl font-bold">{title}</h1>
             <ul  className="flex flex-col">
                 {dados.map((dado, index) => (
