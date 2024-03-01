@@ -44,3 +44,7 @@
     text-shadow: 1px 1px 1px #000; 
   }
   {/**Debug Css**/}
+
+body {
+  background-color: #F5F5F7;
+}
