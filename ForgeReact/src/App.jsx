@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import GalleryPage from './pages/gallery';
-import ComponentRender from './pages/renderComponent';
+// import ComponentRender from './pages/renderComponent';
 
 function App() {
   const images = [
@@ -14,7 +14,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<GalleryPage />} />
-          <Route exact path="/component" element={<ComponentRender />} />
+          {/* <Route exact path="/component" element={<ComponentRender />} /> */}
         </Routes>
       </Router>
     </>

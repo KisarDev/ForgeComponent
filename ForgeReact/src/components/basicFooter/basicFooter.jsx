@@ -1,9 +1,9 @@
-import BoxSocialMidia from '../BoxSocialMidia/BoxSocialMidia'
+import BoxSocialMidia from './BoxSocialMidia/BoxSocialMidia'
 import boxSocialMidiaData from '../BoxSocialMidia/dados'
-import BoxUlLinks from '../footer/boxUlLinks/boxUlLinks'
-import footerDate from '../footer/boxUlLinks/dados'
-import Parceiros from '../footer/parceiros/parceiros'
-import parceirosData from '../footer/parceiros/dados'
+import BoxUlLinks from './boxUlLinks/boxUlLinks'
+import boxUlData from './boxUlLinks/dados'
+import Parceiros from './parceiros/parceiros'
+import parceirosData from './parceiros/dados'
 
 export default function BasicFooter() {
     return (
@@ -13,11 +13,11 @@ export default function BasicFooter() {
             </div>
             <div className='flex flex-col md:flex-row justify-between px-4 md:w-[1200px] items-center'>
                 <div className='flex flex-col md:flex-row md:border-r px-8 border-black'>
-                <BoxUlLinks title={'CONTATO'} dados={footerDate} have_icon={true}/>
+                <BoxUlLinks title={'CONTATO'} dados={boxUlData} have_icon={true}/>
                 </div>
                 <div className='flex flex-col md:flex-row items-center justify-center gap-8 md:border-r px-8 border-black'>
-                    <BoxUlLinks title={'CONTATO'} dados={footerDate} />
-                    <BoxUlLinks title={'CONTATO'} dados={footerDate} />
+                    <BoxUlLinks title={'CONTATO'} dados={boxUlData} />
+                    <BoxUlLinks title={'CONTATO'} dados={boxUlData} />
                 </div>
 
 

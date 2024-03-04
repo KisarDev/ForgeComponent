@@ -1,4 +1,4 @@
-const footerDate = [
+const boxUlData = [
     {
         title: 'Política de entrega',
         link: '#',
@@ -44,4 +44,4 @@ const footerDate = [
 
 ];
 
-export default footerDate;
+export default boxUlData;
