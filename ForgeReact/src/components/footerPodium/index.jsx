@@ -13,18 +13,18 @@ export default function FooterPodium() {
             <div className="part-1 flex flex-col md:justify-center md:items-center bg-[#1C1C25] w-full md:h-[120px]">
                 <div className="md:w-[1200px] justify-center md:flex md:justify-between">
                     <div className="">
-                        <h3 className="font-bold">{podiumData.props.newsLetter.value.title}</h3>
-                        <h3>{podiumData.props.newsLetter.value.subtitle}</h3>
+                        <h3 className="font-bold max-md:p-2">{podiumData.props.newsLetter.value.title}</h3>
+                        <h3 className="max-md:p-2">{podiumData.props.newsLetter.value.subtitle}</h3>
                     </div>
-                    <div className="flex justify-between md:gap-4 md:w-[600px]">
-                        <input className="rounded-full md:grow p-2 placeholder:px-2" type="text" placeholder={podiumData.props.newsLetter.value.placeholder} />
-                        <button className="px-12 rounded-full bg-[#E40028] font-bold text-lg">Enviar</button>
+                    <div className="flex justify-between md:gap-4 md:w-[600px] max-md:justify-center">
+                        <input className="rounded-full md:grow p-2 placeholder:px-2 max-md:rounded-r-none" type="text" placeholder={podiumData.props.newsLetter.value.placeholder} />
+                        <button className="px-12 rounded-full bg-[#E40028] font-bold text-lg max-md:rounded-l-none">Enviar</button>
                     </div>
                 </div>
             </div>
 
             <div className="part-2 md:w-[1200px] flex flex-col justify-center items-center pb-2">
-                <div className="md:w-[662px] flex flex-col justify-center items-center gap-4">
+                <div className="flex flex-col justify-center items-center gap-4">
                     <div className="md:w-[270px] flex flex-col text-center pt-6">
                         <h3 className="font-bold">{podiumData.props.atendimento.value.title}</h3>
                         <h3>{podiumData.props.atendimento.value.subtitle}</h3>
@@ -32,7 +32,7 @@ export default function FooterPodium() {
                     <div className="flex flex-col md:flex-row justify-between gap-4 text-white">
                         {podiumData.props.atendimento.value.contacts.map((prop, index) => (
 
-                            <div className="flex bg-[#E40028] rounded-full p-2 gap-2 gap-x-4"><Icon svgString={prop.icon} className="p-1 px-4"></Icon>{prop.title}</div>
+                            <div className="flex bg-[#E40028] rounded-full py-2 px-6 gap-3 justify-center items-center font-semibold"><Icon svgString={prop.icon}></Icon>{prop.title}</div>
                         )
 
                         )}
@@ -43,7 +43,7 @@ export default function FooterPodium() {
 
             <div className="part-3 max-md:justify-center max-md:items-center md:w-[1200px] flex flex-col md:flex-row md:justify-between text-gray-200 gap-10 border-t  border-gray-700 pt-6">
 
-                <div className="flex flex-col bg-black max-md:items-center md:justify-between md:h-[142px]">
+                <div className="flex flex-col from-[#0D0D12] to-[#060606] max-md:items-center md:justify-between md:h-[142px]">
                     <img className="w-[179px]" src={podiumData.props.logo.value} alt="" />
                     <BoxSocialMidia dados={boxSocialMidiaData} title="siga-nos em:" direction="col" />
                 </div>
